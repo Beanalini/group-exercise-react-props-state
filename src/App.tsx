@@ -29,7 +29,7 @@ function App() {
       joke: "Chuck Norris does not own a stove, oven, or microwave, because revenge is a dish best served cold.",
     },
   ]);
-  console.log(jokes);
+
   const filteredJokes = jokes.filter((joke) => joke.id === 3);
 
   return (
