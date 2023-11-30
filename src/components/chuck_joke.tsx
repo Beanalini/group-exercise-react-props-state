@@ -1,9 +1,15 @@
 interface ChuckJokeProps {
-
+  jokes: {
+    joke: string;
+    id: number;
+  }[];
 }
 
-const ChuckJoke: React.FC<ChuckJokeProps> = () => <p></p>
+const ChuckJoke: React.FC<ChuckJokeProps> = ({ jokes }) => {
+  const joke = jokes.map((joke) => {
+    return <li key={joke.id}> {joke.joke}</li>;
+  });
 
-
-
+  return <p>{joke}</p>;
+};
 export default ChuckJoke;
