@@ -30,6 +30,7 @@ function App() {
     },
   ]);
   console.log(jokes);
+  const filteredJokes = jokes.filter((joke) => joke.id === 3);
 
   return (
     <div className="App">
@@ -39,6 +40,8 @@ function App() {
       <ChuckInfo whaleCount={whalesSaved} kickCount={roundHouseKicks} />
       <h2>Jokes: </h2>
       <ChuckJoke jokes={jokes} />
+      <h2>Filtered Jokes: </h2>
+      <ChuckJoke jokes={filteredJokes} />
     </div>
   );
 }
