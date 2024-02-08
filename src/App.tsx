@@ -3,7 +3,7 @@ import { useState } from "react";
 import ChuckCard from "./components/chuck_card";
 import ChuckInfo from "./components/chuck_info";
 import Joke from "./joke";
-import ChuckJoke from "./components/chuck_joke";
+import ChuckJokeList from "./components/chuck_joke_list";
 
 function App() {
   const [chuckGreeting, setChuckGreeting] = useState<string>(
@@ -39,9 +39,9 @@ function App() {
       <h2>Chuck Info: </h2>
       <ChuckInfo whaleCount={whalesSaved} kickCount={roundHouseKicks} />
       <h2>Jokes: </h2>
-      <ChuckJoke jokes={jokes} />
+      <ChuckJokeList jokes={jokes} />
       <h2>Filtered Jokes: </h2>
-      <ChuckJoke jokes={filteredJokes} />
+      <ChuckJokeList jokes={filteredJokes} />
     </div>
   );
 }
